@@ -1,0 +1,26 @@
+[bin]
+geth_dir = "./geth2"
+puppeth_dir = "./puppeth"
+
+[test]
+test = false
+n = 50
+period = 35
+start_nonce = 0
+payload = 0
+
+[node]
+dir = "nodes"
+count = 20
+sealer_count = 16
+random_connect = true # When random connection is on, connection is omitted.
+peer_count = 3
+
+[init]
+accounts_dir = "nodes/accounts.toml"
+mining_period = 5
+
+[run]
+wan = true
+accounts_dir = "nodes/accounts.toml"
+tee = true

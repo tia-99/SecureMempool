@@ -1,0 +1,59 @@
+[bin]
+geth_dir = "./geth-with-tee/go_build_github_com_ethereum_go_ethereum_cmd_geth2.exe"
+puppeth_dir = "./geth-with-tee/puppeth"
+
+[test]
+test = true
+# n = 0
+# period = 18
+n = 150
+period = 35
+start_nonce = 0
+payload = 0
+
+[node]
+dir = "nodes"
+# count = 2
+# sealer_count = 1
+# connection = [[1], [0]]
+count = 3
+sealer_count = 2
+connection = [
+    [1, 2],
+    [0, 2],
+    [0, 1]
+]
+# count = 10
+# sealer_count = 16
+# random_connect = true # When random connection is on, connection is omitted.
+# peer_count = 3
+# connection = [
+#     [4,5,6],
+#     [4,6,7],
+#     [4,7,8],
+#     [4,5,8],
+#     [0,1,2,3],
+#     [0,3],
+#     [0,1],
+#     [1,2],
+#     [2,3],]
+#     # [0],    [0],    [0],    [0],    [0],    [0],    [0]]
+
+[init]
+accounts_dir = "nodes/accounts.toml"
+mining_period = 5
+
+[run]
+wan = true
+accounts_dir = "nodes/accounts.toml"
+tee = false
+hosts = [
+    ["172.18.19.103", "1022", "hxw", "huxuanwei"],
+    ["172.18.19.103", "1022", "hxw", "huxuanwei"],
+    ["172.18.19.103", "1022", "hxw", "huxuanwei"]
+]
+
+[remote]
+ip = ""
+username = ""
+opensgx_dir = ""
