@@ -4,6 +4,16 @@
 - geth-runner: A rust client for initializing and managing local consensus networks.
 - WAN-test: Python scripts for WAN tests.
 
+## Build
+Build Go Ethereum
+```
+cd Geth; go build ./cmd/geth
+```
+Build Mempool
+```
+cd OpenSGX/users; make ./test/core/txpool
+```
+
 ## How to Run
 - Edit *config.toml* to configure a consensus network
 	```
